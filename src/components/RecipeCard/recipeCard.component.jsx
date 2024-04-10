@@ -21,16 +21,16 @@ export const RecipeCard = (props) => {
   };
   const veganString = props.vegan ? "Yes" : "No";
 
-  const recipeid = props.id;
   return (
     <Card
       sx={{
         width: "100%",
+        height: "80vh",
         p: 0,
         borderRadius: "25px",
       }}
     >
-      <CardContent sx={{ p: 0, height: "100%" }}>
+      <CardContent sx={{ p: 0 }}>
         <Box sx={{ position: "relative" }}>
           <Box
             component="img"
@@ -38,7 +38,7 @@ export const RecipeCard = (props) => {
             alt="image of dish"
             sx={{
               width: "100%",
-              height: 300,
+              height: "60%",
               margin: "auto",
               borderRadius: "25px",
             }}
@@ -114,7 +114,6 @@ export const RecipeCard = (props) => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  height: 40,
                   borderRadius: "25px",
                   gap: 4,
                   backgroundColor: "#EEEEFF",
@@ -130,20 +129,30 @@ export const RecipeCard = (props) => {
               </Box>
             </Box>
           </Box>
-          <Typography
-            variant="body1"
-            sx={{ flex: 1, marginTop: 1, marginX: 1, color: "red" }}
+          <Box sx={{ display: "flex", marginTop: 1, marginX: 1 }}>
+            <Typography variant="body1" sx={{ flex: 1, color: "red" }}>
+              Vegan : {veganString}
+            </Typography>
+            <Link href={`/recipe/${props.id}`}>View Details</Link>
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              height: "25vh",
+              overflowY: "auto",
+            }}
           >
-            Vegan : {veganString}
-          </Typography>
-          <Box sx={{ width: "30%", overflowY: "auto" }}>
             <Typography
               variant="body2"
-              sx={{ marginLeft: 1, marginTop: 1, fontWeight: 900 }}
+              sx={{
+                marginLeft: 1,
+                height: "25vh",
+                marginTop: 1,
+                fontWeight: 900,
+              }}
             >
               {props.description}
             </Typography>
-            <a href={`/recipe/${recipeid.href}`}>View Details</a>
           </Box>
         </Box>
       </CardContent>

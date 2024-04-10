@@ -46,6 +46,7 @@ export const RecipeList = (props) => {
             alignContent: "center",
             alignItems: "center",
             justifyContent: "center",
+            justifyItems: "center",
           }}
         >
           {props.recipeList.map((recipe, index) => (

@@ -5,9 +5,7 @@ import { Footer } from "../components/Footer";
 export const LoginPage = () => {
   return (
     <>
-      <Header />
       <Login />
-      <Footer />
     </>
   );
 };
