@@ -6,7 +6,7 @@ import { Footer } from "../components/Footer";
 import { RecipeDetails } from "../components/RecipeDetails";
 
 export const RecipePage = () => {
-  let { pageName } = useParams();
+  let { recipeId } = useParams();
 
   return (
     <>

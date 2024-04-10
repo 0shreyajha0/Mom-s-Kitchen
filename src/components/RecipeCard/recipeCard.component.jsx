@@ -21,7 +21,7 @@ export const RecipeCard = (props) => {
   };
   const veganString = props.vegan ? "Yes" : "No";
 
-  const handleViewDetails = () => {};
+  const recipeid = props.id;
   return (
     <Card
       sx={{
@@ -143,7 +143,7 @@ export const RecipeCard = (props) => {
             >
               {props.description}
             </Typography>
-            <Link onClick={handleViewDetails}>View Details</Link>
+            <a href={`/recipe/${recipeid.href}`}>View Details</a>
           </Box>
         </Box>
       </CardContent>
