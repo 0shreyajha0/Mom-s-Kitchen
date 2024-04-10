@@ -4,4 +4,5 @@ export const ROUTES = {
   HOME: "/",
   DASHBOARD: "/dashboard",
   RECIPE_PAGE: "/recipe/:recipeId",
+  DYNAMIC_PAGE: "/p/:pageName",
 };

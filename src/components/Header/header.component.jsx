@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, Typography, Button, Avatar } from "@mui/material";
 import { WavyContainer } from "../WavyContainer";
 
 export const Header = () => {
+  let navigate = useNavigate();
+  const handleClickOnDashBoard = () => navigate("/dashboard");
   return (
     <Box sx={{ position: "relative" }}>
       <WavyContainer />
@@ -33,7 +36,9 @@ export const Header = () => {
             justifyContent: "space-between",
           }}
         >
-          <Button variant="text">Home</Button>
+          <Button variant="button" onClick={handleClickOnDashBoard}>
+            DashBoard
+          </Button>
           <Button variant="text">Favourites</Button>
           <Button variant="text">Help</Button>
           <Button variant="text">Contact Us</Button>

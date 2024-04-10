@@ -15,7 +15,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 export const Footer = () => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Box sx={{ position: "relative" }}>
       <Wave
         fill="#161515"
         paused={false}
@@ -29,8 +29,13 @@ export const Footer = () => {
       />
       <Box
         sx={{
+          position: "absolute",
+          bottom: "1%",
+          left: "0",
+          transform: "translate(0, 90%)",
+          zIndex: 1,
           width: "100%",
-          height: "300%",
+          height: "200%",
           backgroundColor: "#161515",
           display: "flex",
           flexDirection: "column",
@@ -130,7 +135,6 @@ export const Footer = () => {
                   </Box>
                 </Box>
               ))}
-              {/* Render About Us section */}
             </Container>
           </Box>
         </Box>
@@ -175,7 +179,11 @@ export const Footer = () => {
                   },
                 }}
               >
-                <a href={item.href} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={`/p/${item.href}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {item.item}
                 </a>
               </Typography>

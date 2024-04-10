@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 
-export const RecipePage = () => {
+export const DynamicPage = () => {
   let { pageName } = useParams();
 
   return (

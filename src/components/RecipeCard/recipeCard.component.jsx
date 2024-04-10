@@ -4,27 +4,37 @@ import {
   CardContent,
   Typography,
   IconButton,
-  Avatar,
+  Link,
   Box,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarIcon from "@mui/icons-material/Star";
 import { BsStars } from "react-icons/bs";
+import image from "../../Assets/Images/JammuRajmaRice.jpeg";
 
-export const RecipeCard = () => {
+export const RecipeCard = (props) => {
+  console.log(props);
   const [liked, setLiked] = useState(false);
 
-  const handleLikeClick = () => {
+  const handleLikeClick = (recipe) => {
     setLiked(!liked);
   };
+  const veganString = props.vegan ? "Yes" : "No";
 
+  const handleViewDetails = () => {};
   return (
-    <Card sx={{ width: 320, p: 0, overflow: "hidden", borderRadius: "25px" }}>
+    <Card
+      sx={{
+        width: "100%",
+        p: 0,
+        borderRadius: "25px",
+      }}
+    >
       <CardContent sx={{ p: 0, height: "100%" }}>
         <Box sx={{ position: "relative" }}>
           <Box
             component="img"
-            src="../../Assets/Images/logo.jpg"
+            src={props.source}
             alt="image of dish"
             sx={{
               width: "100%",
@@ -46,7 +56,7 @@ export const RecipeCard = () => {
               color: "white",
             }}
           >
-            Jammu's Rajma Rice
+            {props.nameOfRecipe}
           </Typography>
           <Typography
             variant="h6"
@@ -60,7 +70,7 @@ export const RecipeCard = () => {
               fontWeight: 500,
             }}
           >
-            Veg
+            {props.category}
           </Typography>
           <Box sx={{ position: "absolute", top: 2, right: 2 }}>
             <IconButton
@@ -73,7 +83,7 @@ export const RecipeCard = () => {
                 color: "white",
               }}
             >
-              <FavoriteIcon />
+              <FavoriteIcon sx={{ color: "red" }} />
             </IconButton>
           </Box>
         </Box>
@@ -94,7 +104,7 @@ export const RecipeCard = () => {
                 color="text.secondary"
                 sx={{ marginLeft: 1 }}
               >
-                3967 Reviews
+                Ready in : {props.readyInMinutes}
               </Typography>
             </Box>
             <Box sx={{}}>
@@ -115,23 +125,26 @@ export const RecipeCard = () => {
                   variant="body2"
                   sx={{ color: "#5D5DEC", fontWeight: 500 }}
                 >
-                  Popular
+                  Health Score : {props.healthScore}
                 </Typography>
               </Box>
             </Box>
           </Box>
           <Typography
             variant="body1"
-            sx={{ flex: 1, marginTop: 1, marginX: 1 }}
+            sx={{ flex: 1, marginTop: 1, marginX: 1, color: "red" }}
           >
-            4.9/5.0
+            Vegan : {veganString}
           </Typography>
-          <Typography
-            variant="body2"
-            sx={{ marginLeft: 1, marginTop: 1, fontWeight: 900 }}
-          >
-            Pre-Prepration
-          </Typography>
+          <Box sx={{ width: "30%", overflowY: "auto" }}>
+            <Typography
+              variant="body2"
+              sx={{ marginLeft: 1, marginTop: 1, fontWeight: 900 }}
+            >
+              {props.description}
+            </Typography>
+            <Link onClick={handleViewDetails}>View Details</Link>
+          </Box>
         </Box>
       </CardContent>
     </Card>

@@ -1,12 +1,12 @@
 import "./App.css";
 import Box from "@mui/material/Box";
-
-import { Home } from "./pages/Home";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router";
 
 function App() {
   return (
     <Box>
-      <Home />
+      <RouterProvider router={router} />
     </Box>
   );
 }
