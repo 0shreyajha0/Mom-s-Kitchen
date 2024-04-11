@@ -41,16 +41,17 @@ export const RecipeDetails = (props) => {
             image={recipeDetails.image}
             alt="Recipe"
           />
-          <CardContent>
+          {/* <CardContent>
             <Box></Box>
-          </CardContent>
+          </CardContent> */}
         </Card>
       </Box>
       <Box
         display="flex"
-        justifyContent="center"
+        justifyContent="space-between"
         flexDirection="row"
         alignItems="center"
+        J
       >
         <Typography variant="h4" align="center" mr={5} gutterBottom>
           Ingredients

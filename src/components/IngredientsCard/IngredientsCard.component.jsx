@@ -9,7 +9,7 @@ export const IngredientsCard = (props) => {
   return (
     <Card
       sx={{
-        width: "100%",
+        width: "10vw",
         height: "30vh",
         p: 0,
         borderRadius: "25px",

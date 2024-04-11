@@ -13,7 +13,7 @@ export const Home = () => {
 
   useEffect(() => {
     // const response = fetch(
-    //   "https://api.spoonacular.com/recipes/random?number=12&apiKey=b2534e0eb9fd4be0839c2fe9a5047ecc"
+    //   "https://api.spoonacular.com/recipes/random?number=12&apiKey=3f10eba91f56409d8c16d5fe42295498"
     // );
     // response
     //   .then((res) => res.json())

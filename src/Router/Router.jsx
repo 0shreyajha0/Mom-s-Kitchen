@@ -15,7 +15,6 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route exact path={ROUTES.HOME} element={<Home />} />
-      <Route exact path={ROUTES.DASHBOARD} element={<Dashboard />} />
       <Route exact path={ROUTES.LOGIN} element={<LoginPage />} />
       <Route exact path={ROUTES.SIGNUP} element={<SignUpPage />} />
       <Route exact path={ROUTES.RECIPE_PAGE} element={<RecipePage />} />
