@@ -11,12 +11,11 @@ export const IngredientsCard = (props) => {
       sx={{
         width: "10vw",
         height: "30vh",
-        p: 0,
         borderRadius: "25px",
       }}
     >
       <CardContent sx={{ p: 0 }}>
-        <Box sx={{ position: "relative" }}>
+        <Box sx={{}}>
           <Box
             component="img"
             src={`https://spoonacular.com/cdn/ingredients_100x100/${props.image}`}

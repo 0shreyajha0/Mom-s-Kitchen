@@ -48,10 +48,11 @@ export const RecipeDetails = (props) => {
       </Box>
       <Box
         display="flex"
-        justifyContent="space-between"
+        justifyContent="center  "
         flexDirection="row"
         alignItems="center"
-        J
+        flexWrap="wrap"
+        overflowX="auto"
       >
         <Typography variant="h4" align="center" mr={5} gutterBottom>
           Ingredients
