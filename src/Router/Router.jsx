@@ -4,12 +4,12 @@ import {
   Route,
 } from "react-router-dom";
 import { ROUTES } from "./Route.constants";
-import { Dashboard } from "../Pages/Dashboard";
-import { DynamicPage } from "../Pages/DynamicPage";
-import { Home } from "../Pages/Home";
-import { LoginPage } from "../Pages/LoginPage";
-import { SignUpPage } from "../Pages/SignUpPage";
-import { RecipePage } from "../Pages/Recipe";
+import { Dashboard } from "../pages/Dashboard";
+import { DynamicPage } from "../pages/DynamicPage";
+import { Home } from "../pages/Home";
+import { LoginPage } from "../pages/LoginPage";
+import { SignUpPage } from "../pages/SignUpPage";
+import { RecipePage } from "../pages/Recipe";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
