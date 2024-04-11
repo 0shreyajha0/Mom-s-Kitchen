@@ -46,16 +46,23 @@ export const RecipeDetails = (props) => {
           </CardContent>
         </Card>
       </Box>
-      <Typography variant="h4" align="center" gutterBottom>
-        Ingredients
-      </Typography>
-      <Box display="flex" justifyContent="center" mb={4}>
-        <Stack direction="row" spacing={2}>
-          {recipeDetails.extendedIngredients &&
-            recipeDetails.extendedIngredients.map((ingredient, index) => (
-              <IngredientsCard key={index} ingredient={ingredient} />
-            ))}
-        </Stack>
+      <Box
+        display="flex"
+        justifyContent="center"
+        flexDirection="row"
+        alignItems="center"
+      >
+        <Typography variant="h4" align="center" mr={5} gutterBottom>
+          Ingredients
+        </Typography>
+        <Box width="80vw" display="flex" justifyContent="center" mb={4}>
+          <Stack direction="row" spacing={2}>
+            {recipeDetails.extendedIngredients &&
+              recipeDetails.extendedIngredients.map((ingredient, index) => (
+                <IngredientsCard key={index} ingredient={ingredient} />
+              ))}
+          </Stack>
+        </Box>
       </Box>
       <Typography variant="h4" align="center" gutterBottom>
         Instructions
