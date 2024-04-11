@@ -41,9 +41,25 @@ export const RecipeDetails = (props) => {
             image={recipeDetails.image}
             alt="Recipe"
           />
-          {/* <CardContent>
-            <Box></Box>
-          </CardContent> */}
+          <CardContent>
+            <Box>
+              <Typography variant="h4" align="center" gutterBottom>
+                Information
+              </Typography>
+              <Typography variant="body1" align="center" gutterBottom>
+                Ready in {recipeDetails.readyInMinutes} minutes
+              </Typography>
+              <Typography variant="body1" align="center" gutterBottom>
+                Servings: {recipeDetails.servings}
+              </Typography>
+              <Typography variant="body1" align="center" gutterBottom>
+                Aggregate Likes: {recipeDetails.aggregateLikes}
+              </Typography>
+              <Typography variant="body1" align="center" gutterBottom>
+                Health Score: {recipeDetails.healthScore}
+              </Typography>
+            </Box>
+          </CardContent>
         </Card>
       </Box>
       <Box
