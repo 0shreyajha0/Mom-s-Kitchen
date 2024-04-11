@@ -10,7 +10,6 @@ import {
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import StarIcon from "@mui/icons-material/Star";
 import { BsStars } from "react-icons/bs";
-import image from "../../Assets/Images/JammuRajmaRice.jpeg";
 
 export const RecipeCard = (props) => {
   console.log(props);
