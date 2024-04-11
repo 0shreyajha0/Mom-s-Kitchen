@@ -13,7 +13,7 @@ export const Home = () => {
 
   useEffect(() => {
     const response = fetch(
-      "https://api.spoonacular.com/recipes/random?number=12&apiKey=3f10eba91f56409d8c16d5fe42295498"
+      "https://api.spoonacular.com/recipes/random?number=12&apiKey= 420dacd647ee45319a803d9f1801a82e"
     );
     response
       .then((res) => res.json())
@@ -22,7 +22,7 @@ export const Home = () => {
         setRecipeList(data.recipes);
       });
 
-    // //This is temporary
+    // This is temporary
     // setRecipeList(MOCK_DATA);
   }, []);
 
